@@ -13,6 +13,6 @@ player.getVideoTitle().then(function(title) {
      console.log('title:', title);
    
 });
-//  player.on('timeupdate', function(data) {
-//        localStorage.setItem("videoplayer-current-time",JSON.stringify(data.seconds))
-//     });   
+ player.on('timeupdate', function(data) {
+       localStorage.setItem("videoplayer-current-time",JSON.stringify(data.seconds))
+    });   
