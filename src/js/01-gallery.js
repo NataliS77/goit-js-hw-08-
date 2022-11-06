@@ -1,14 +1,13 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+console.log(SimpleLightbox)
 // Change code below this line
-import SimpleLightbox from "simplelightbox"
-import "simplelightbox/dist/simple-lightbox.min.css"
-import simpleLightbox from 'simplelightbox';
-console.log (SimpleLightbox)
+
 console.log(galleryItems);
 const galleryContainer = document.querySelector('.gallery')
 const cardMarkup = createGalleryItemsMarkup(galleryItems);
-// galleryContainer.addEventListener('click', onOpenModalGallery)
 galleryContainer.insertAdjacentHTML('beforeend', cardMarkup);
 
 function createGalleryItemsMarkup (galleryItems){
