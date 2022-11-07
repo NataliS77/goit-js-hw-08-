@@ -19,7 +19,7 @@ const message = document.querySelector('textarea');
     event.preventDefault();
     event.currentTarget.reset();
     localStorage.removeItem(key)
-    console.log(object)
+
  }
  function onFormInput(event){
     object.email= email.value;
