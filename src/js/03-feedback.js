@@ -8,8 +8,10 @@ const message = document.querySelector('textarea');
  console.log(message)
 
  const key = "feedback-form-state";
- const object =(null)||{};
+ const object =(0)||{};
   
+ console.log(object)
+
  form.addEventListener('input',throttle(onFormInput, 500));
  form.addEventListener('submit', onFormSubmit);
  
@@ -19,7 +21,7 @@ const message = document.querySelector('textarea');
     event.preventDefault();
     event.currentTarget.reset();
     localStorage.removeItem(key)
-
+console.log(event)
  }
  function onFormInput(event){
     object.email= email.value;

@@ -14,13 +14,26 @@ player.getVideoTitle().then(function(title) {
      console.log('title:', title);
    
 });
-
-player.setCurrentTime(Number(localStorage.getItem('key')) || 0);
-
 function onPlay(data) { 
-    localStorage.setItem('key', JSON.stringify(data))
+    localStorage.setItem(key, data.seconds)
    }  
     console.log(localStorage);
 
     player.on('timeupdate', throttle(onPlay, 1000));
 
+    const timeVideoData = localStorage.getItem(key);
+
+    player.setCurrentTime(timeVideoData) || 0;
+
+
+//     player.setCurrentTime(timeVideoData).then(function(seconds){ })
+//      .catch(function(error){
+//           switch(error.name){
+//                case "RangerError":
+//                     break;
+//                     default:
+//                          break;
+
+//           }
+//      })
+   
