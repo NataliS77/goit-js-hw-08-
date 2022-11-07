@@ -15,13 +15,13 @@ player.getVideoTitle().then(function(title) {
    
 });
 function onPlay(data) { 
-    localStorage.setItem(key, data.seconds)
+    localStorage.setItem("key", data.seconds)
    }  
     console.log(localStorage);
 
     player.on('timeupdate', throttle(onPlay, 1000));
 
-    const timeVideoData = localStorage.getItem(key);
+    const timeVideoData = localStorage.getItem('key');
 
     player.setCurrentTime(timeVideoData) || 0;
 
@@ -36,4 +36,10 @@ function onPlay(data) {
 
 //           }
 //      })
-   
+// const greet = () => {
+//   console.log(greet ("Hello!"));
+// };
+
+// // const timerId = setTimeout(greet, 3000);
+
+// // clearTimeout(timerId);

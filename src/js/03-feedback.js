@@ -8,7 +8,7 @@ const message = document.querySelector('textarea');
  console.log(message)
 
  const key = "feedback-form-state";
- const object =(0)||{};
+ const object = null||{};
   
  console.log(object)
 
