@@ -15,7 +15,7 @@ player.getVideoTitle().then(function(title) {
    
 });
 
-player.setCurrentTime(localStorage.getItem('key') || 0);
+player.setCurrentTime(Number(localStorage.getItem('key')) || 0);
 
 function onPlay(data) { 
     localStorage.setItem('key', JSON.stringify(data))
