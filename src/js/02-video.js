@@ -36,10 +36,6 @@ function onPlay(data) {
 
 //           }
 //      })
-// const greet = () => {
-//   console.log(greet ("Hello!"));
-// };
 
-// // const timerId = setTimeout(greet, 3000);
 
-// // clearTimeout(timerId);
+
